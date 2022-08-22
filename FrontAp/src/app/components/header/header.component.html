@@ -1,0 +1,286 @@
+<div *ngIf="persona" id="main-container">
+  <div class="row align-items">
+    <div class="col text-center">
+      <div class="editBanner">
+        <button *ngIf="isLogged">
+          <a
+            (click)="onOpenModal('editBanner', persona)"
+            class="btn btn-primary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Edit"
+            ><i class="fa fa-pencil"></i>
+          </a>
+        </button>
+      </div>
+      <div class="editPerfil">
+        <button *ngIf="isLogged">
+          <a
+            (click)="onOpenModal('editPerfil', persona)"
+            class="btn btn-primary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Edit"
+            ><i class="fa fa-pencil"></i>
+          </a>
+        </button>
+      </div>
+      <div class="editDesc">
+        <button *ngIf="isLogged">
+          <a
+            (click)="onOpenModal('editDesc', persona)"
+            class="btn btn-primary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Edit"
+            ><i class="fa fa-pencil"></i>
+          </a>
+        </button>
+      </div>
+    </div>
+    <div class="col-3">
+      <img src="{{ persona.bannerImgPersona }}" alt="" width="100">
+    </div>
+    <div class="col-6">
+     <img src="{{ persona.perfilImgPersona }}" alt="" width="100"> {{ persona.nombrePersona }}
+      {{ persona.apellidoPersona }} {{ persona.tituloPersona }}
+    </div>
+    <div class="col-9">
+      {{ persona.descPersona }}
+    </div>
+  </div>
+</div>
+
+<!-- Modal edit banner -->
+
+<div
+  class="modal fade"
+  id="editBannerPersonaModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="editBannerPersonaModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editBannerPersonaModalLabel">
+          Edit Banner
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <form #editForm="ngForm">
+            <div class="form-group">
+              <label for="bannerImgPersona">Banner: </label>
+              <input
+                type="text"
+                ngModel="{{ editPersona?.bannerImgPersona }}"
+                name="bannerImgPersona"
+                class="form-control"
+                id="bannerImgPersona"
+                placeholder="Banner"
+              />
+              <input
+                type="hidden"
+                ngModel="{{ editPersona?.idPersona }}"
+                name="idPersona"
+                class="form-control"
+                id="idPersona"
+                placeholder=""
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                id=""
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                (click)="onUpdatePersona(editForm.value)"
+                data-dismiss="modal"
+                class="btn btn-primary"
+              >
+                Add changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal edit persona -->
+
+<div
+  class="modal fade"
+  id="editPerfilPersonaModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="editPerfilPersonaModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editPerfilPersonaModalLabel">
+          Edit Perfil
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <form #editForm="ngForm">
+            <div class="form-group">
+              <label for="nombrePersona">Nombre: </label>
+              <input
+                type="text"
+                ngModel="{{ editPersona?.nombrePersona }}"
+                name="nombrePersona"
+                class="form-control"
+                id="nombrePersona"
+                placeholder="Nombre"
+              />
+              <label for="apellidoPersona">Apellido: </label>
+              <input
+                type="text"
+                ngModel="{{ editPersona?.apellidoPersona }}"
+                name="apellidoPersona"
+                class="form-control"
+                id="apellidoPersona"
+                placeholder="Apellido"
+              />
+              <label for="tituloPersona">Titulo: </label>
+              <input
+                type="text"
+                ngModel="{{ editPersona?.tituloPersona }}"
+                name="tituloPersona"
+                class="form-control"
+                id="tituloPersona"
+                placeholder="Titulo"
+              />
+              <label for="perfilImgPersona">Imagen perfil: </label>
+              <input
+                type="text"
+                ngModel="{{ editPersona?.perfilImgPersona }}"
+                name="perfilImgPersona"
+                class="form-control"
+                id="perfilImgPersona"
+                placeholder="Imagen perfil"
+              />
+              <input
+                type="hidden"
+                ngModel="{{ editPersona?.idPersona }}"
+                name="idPersona"
+                class="form-control"
+                id="idPersona"
+                placeholder=""
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                id=""
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                (click)="onUpdatePersona(editForm.value)"
+                data-dismiss="modal"
+                class="btn btn-primary"
+              >
+                Add changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal edit descripción -->
+
+<div
+  class="modal fade"
+  id="editDescPersonaModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="editDescPersonaModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editDescPersonaModalLabel">
+          Edit Descripción
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body">
+          <form #editForm="ngForm">
+            <div class="form-group">
+              <label for="descPersona">Descripción: </label>
+              <input
+                type="text"
+                ngModel="{{ editPersona?.descPersona }}"
+                name="descPersona"
+                class="form-control"
+                id="descPersona"
+                placeholder="Descripción"
+              />
+              <input
+                type="hidden"
+                ngModel="{{ editPersona?.idPersona }}"
+                name="idPersona"
+                class="form-control"
+                id="idPersona"
+                placeholder=""
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                id=""
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                (click)="onUpdatePersona(editForm.value)"
+                data-dismiss="modal"
+                class="btn btn-primary"
+              >
+                Add changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
