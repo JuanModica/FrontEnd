@@ -7,15 +7,15 @@ import { Persona } from '../models/persona';
   providedIn: 'root'
 })
 export class HeaderService {
-  URL = 'http://localhost:8080/persona/';
+  URL = 'http://localhost:8080/persona';
 
   constructor(private http: HttpClient) { }
 
   public getPersona():Observable<Persona>{
-    return this.http.get<Persona>(this.URL + 'id/1');
+    return this.http.get<Persona>(this.URL + '/id/1')
   }
 
   public updatePersona(persona: Persona):Observable<Persona>{
-    return this.http.put<Persona>(this.URL + 'update', persona);
+    return this.http.put<Persona>(this.URL + '/update', persona);
   }
 }

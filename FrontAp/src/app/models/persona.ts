@@ -3,7 +3,12 @@ export interface Persona {
     nombrePersona: string;
     apellidoPersona: string;
     tituloPersona: string;
-    descPersona: string;
+    edadPersona: string;
+    dniPersona: number;
+    direccionPersona: string;
+    ubicacionPersona: string;
+    contactoPersona: number;
+    emailPersona: string;
     perfilImgPersona: string;
     bannerImgPersona: string;
 }

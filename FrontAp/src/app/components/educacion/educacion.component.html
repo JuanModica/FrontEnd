@@ -32,16 +32,15 @@
       </button>
     </div>
     <div class="col-3">
-      {{ educacion.nombreEdu }}
+      {{ educacion.fechaEdu }}
+      {{ educacion.estadoEdu }}
+ 
     </div>
     <div class="col-6">
+      {{ educacion.nombreEdu }}
       {{ educacion.descEdu }}
-    </div>
-    <div class="col-9">
-      {{ educacion.fechaEdu }}
-    </div>
-    <div class="col-12">
-      {{ educacion.estadoEdu }}
+      {{ educacion.direccionEdu }}
+      {{ educacion.contactoEdu }}
     </div>
   </div>
 </div>
@@ -80,18 +79,6 @@
             />
           </div>
           <div class="form-group">
-            <label for="descEdu">Descripción: </label>
-            <input
-              type="text"
-              ngModel
-              name="descEdu"
-              class="form-control"
-              id="descEdu"
-              placeholder="Descripcion"
-              required
-            />
-          </div>
-          <div class="form-group">
             <label for="fechaEdu">Fecha: </label>
             <input
               type="text"
@@ -103,6 +90,43 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label for="direccionEdu">Dirección: </label>
+            <input
+              type="text"
+              ngModel
+              name="direccionEdu"
+              class="form-control"
+              id="direccionEdu"
+              placeholder="Dirección"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactoEdu">Contacto: </label>
+            <input
+              type="text"
+              ngModel
+              name="contactoEdu"
+              class="form-control"
+              id="contactoEdu"
+              placeholder="Contacto"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="descEdu">Descripción: </label>
+            <input
+              type="text"
+              ngModel
+              name="descEdu"
+              class="form-control"
+              id="descEdu"
+              placeholder="Descripcion"
+              required
+            />
+          </div>
+
           <div class="form-group">
             <label for="estadoEdu">Estado: </label>
             <input
@@ -183,17 +207,6 @@
               />
             </div>
             <div class="form-group">
-              <label for="descEdu">Descripción: </label>
-              <input
-                type="text"
-                ngModel="{{ editEducacion?.descEdu }}"
-                name="descEdu"
-                class="form-control"
-                id="descEdu"
-                placeholder="Descripción"
-              />
-            </div>
-            <div class="form-group">
               <label for="fechaEdu">Fecha: </label>
               <input
                 type="text"
@@ -202,6 +215,39 @@
                 class="form-control"
                 id="fechaEdu"
                 placeholder="Fecha"
+              />
+            </div>
+            <div class="form-group">
+              <label for="direccionEdu">Dirección: </label>
+              <input
+                type="text"
+                ngModel="{{ editEducacion?.direccionEdu }}"
+                name="direccionEdu"
+                class="form-control"
+                id="direccionEdu"
+                placeholder="Dirección"
+              />
+            </div>
+            <div class="form-group">
+              <label for="contactoEdu">Contacto: </label>
+              <input
+                type="text"
+                ngModel="{{ editEducacion?.contactoEdu }}"
+                name="contactoEdu"
+                class="form-control"
+                id="contactoEdu"
+                placeholder="Contacto"
+              />
+            </div>
+            <div class="form-group">
+              <label for="descEdu">Descripción: </label>
+              <input
+                type="text"
+                ngModel="{{ editEducacion?.descEdu }}"
+                name="descEdu"
+                class="form-control"
+                id="descEdu"
+                placeholder="Descripción"
               />
             </div>
             <div class="form-group">

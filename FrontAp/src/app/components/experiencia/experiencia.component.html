@@ -33,15 +33,13 @@
       </div>
       <div class="col-3">
         {{ experiencia.nombreExp }}
-      </div>
-      <div class="col-6">
+        {{ experiencia.direccionExp }}
+        {{ experiencia.contactoExp }}
         {{ experiencia.descExp }}
       </div>
       <div class="col-9">
+         {{ experiencia.puestoExp }}      
         {{ experiencia.fechaExp }}
-      </div>
-      <div class="col-12">
-        {{ experiencia.puestoExp }}
       </div>
     </div>
   </div>
@@ -78,8 +76,68 @@
                 placeholder="Titulo"
                 required
               />
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
+              <label for="fechaExp">Fecha: </label>
+              <input
+                type="text"
+                ngModel
+                name="fechaExp"
+                class="form-control"
+                id="fechaExp"
+                placeholder="Fecha"
+                required
+                />
+              </div>
+              <div class="form-group">
+                <label for="puestoExp">Puesto: </label>
+                <input
+                  type="text"
+                  ngModel
+                  name="puestoExp"
+                  class="form-control"
+                  id="puestoExp"
+                  placeholder="Puesto"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="ubicacioneExp">Ubicación: </label>
+                <input
+                  type="text"
+                  ngModel
+                  name="ubicacioneExp"
+                  class="form-control"
+                  id="ubicacioneExp"
+                  placeholder="Ubicación"
+                  required
+                />
+                </div>
+              <div class="form-group">
+                <label for="direccionExp">Dirección: </label>
+                <input
+                  type="text"
+                  ngModel
+                  name="direccionExp"
+                  class="form-control"
+                  id="direccionExp"
+                  placeholder="Dirección"
+                  required
+                />
+                </div>
+                <div class="form-group">
+                  <label for="contactoExp">Contacto: </label>
+                  <input
+                    type="text"
+                    ngModel
+                    name="contactoExp"
+                    class="form-control"
+                    id="contactoExp"
+                    placeholder="Contacto"
+                    required
+                  />
+                  </div>
+              <div class="form-group">
               <label for="descExp">Descripción: </label>
               <input
                 type="text"
@@ -90,31 +148,7 @@
                 placeholder="Descripción"
                 required
               />
-            </div>
-            <div class="form-group">
-              <label for="fechaExp">Fecha: </label>
-              <input
-                type="text"
-                ngModel
-                name="fechaExp"
-                class="form-control"
-                id="fechaExp"
-                placeholder="Fecha"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="puestoExp">Puesto: </label>
-              <input
-                type="text"
-                ngModel
-                name="puestoExp"
-                class="form-control"
-                id="puestoExp"
-                placeholder="Puesto"
-                required
-              />
-            </div>
+              </div>
             <div class="modal-footer">
               <button
                 type="button"
@@ -183,17 +217,6 @@
                 />
               </div>
               <div class="form-group">
-                <label for="descExp">Descripción: </label>
-                <input
-                  type="text"
-                  ngModel="{{ editExperiencia?.descExp }}"
-                  name="descExp"
-                  class="form-control"
-                  id="descExp"
-                  placeholder="Descripción"
-                />
-              </div>
-              <div class="form-group">
                 <label for="fechaExp">Fecha: </label>
                 <input
                   type="text"
@@ -213,6 +236,50 @@
                   class="form-control"
                   id="puestoExp"
                   placeholder="Puesto"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ubicacionExp">Ubicación: </label>
+                <input
+                  type="text"
+                  ngModel="{{ editExperiencia?.ubicacionExp }}"
+                  name="ubicacionExp"
+                  class="form-control"
+                  id="ubicacionExp"
+                  placeholder="Ubicación"
+                />
+              </div>
+              <div class="form-group">
+                <label for="direccionExp">Dirección: </label>
+                <input
+                  type="text"
+                  ngModel="{{ editExperiencia?.direccionExp }}"
+                  name="direccionExp"
+                  class="form-control"
+                  id="direccionExp"
+                  placeholder="Dirección"
+                />
+              </div>
+              <div class="form-group">
+                <label for="contactoExp">Contacto: </label>
+                <input
+                  type="text"
+                  ngModel="{{ editExperiencia?.contactoExp }}"
+                  name="contactoExp"
+                  class="form-control"
+                  id="contactoExp"
+                  placeholder="Contacto"
+                />
+              </div>
+              <div class="form-group">
+                <label for="descExp">Descripción: </label>
+                <input
+                  type="text"
+                  ngModel="{{ editExperiencia?.descExp }}"
+                  name="descExp"
+                  class="form-control"
+                  id="descExp"
+                  placeholder="Descripción"
                 />
               </div>
               <div class="modal-footer">
