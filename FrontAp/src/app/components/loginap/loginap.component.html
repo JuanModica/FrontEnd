@@ -1,4 +1,28 @@
-<div>
-    <button type="button" (click)="login()" *ngIf="!isLogged">INGRESO</button>
-    <button type="button" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+<div class="container-fluid">
+    <div class="row">
+        <div>
+            <img src="../../../assets/APLogo.png" id="logoAP">
+        </div>
+        <div>
+            <a href="">
+                <img src="../../../assets/linkedin.png" id="linkedin">
+            </a>
+            <a href="">
+                <img src="../../../assets/github.png" id="git">
+            </a>
+            <a href="">
+                <img src="../../../assets/twitter.png" id="twitter">
+            </a>
+            <a href="">
+                <img src="../../../assets/facebook.png" id="facebook">
+            </a>
+            <a href="">
+                <img src="../../../assets/instagram.png" id="instagram">
+            </a>
+        </div>
+        <div>
+            <button  type="button" (click)="login()" *ngIf="!isLogged">Login</button>
+            <button  type="button" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
+        </div>
+    </div>
 </div>

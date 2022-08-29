@@ -2,33 +2,80 @@
   <div class="row align-items">
     <div class="col text-center">
       <div class="editBanner">
-        <button *ngIf="isLogged">
+        <button class="pencil" *ngIf="isLogged">
           <a
             (click)="onOpenModal('editPerfil', persona)"
-            class="btn btn-primary tooltips"
             data-placement="top"
             data-toggle="tooltip"
             data-original-title="Edit"
-            ><i class="fa fa-pencil"></i>
+            ><i class="fa-solid fa-pen-to-square"></i>
           </a>
         </button>
       </div>
     </div>
   </div>
-<div class="row">
-  <div class="col-3">
-    <img src="{{ persona.bannerImgPersona }}" alt="" width="100" />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div>
+          <img src="{{ persona.bannerImgPersona }}" alt="" id="banner" />
+        </div>
+        <div>
+          <img
+            src="{{ persona.perfilImgPersona }}"
+            class="img-fluid"
+            width="100"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3" id="card-perfil">
+        <h2 class="nombre">
+          {{ persona.nombrePersona }} {{ persona.apellidoPersona }}
+        </h2>
+        <p class="profesion">{{ persona.tituloPersona }}</p>
+      </div>
+      <div class="col-2">
+        <div id="eclipse1">
+        </div>
+        <div id="eclipse2">
+        </div>
+        <div id="eclipse3">
+        </div>
+      </div>
+      <div class="col-5" id="card-info">
+        <ul>
+          <h2>Informacion:</h2>
+          <li>
+            {{ persona.edadPersona }}
+          </li>
+          <li>
+            {{ persona.direccionPersona }}
+          </li>
+          <li>
+            {{ persona.ubicacionPersona }}
+          </li>
+          <li>
+            {{ persona.dniPersona }}
+          </li>
+          <li>
+            {{ persona.emailPersona }}
+          </li>
+          <li>
+            {{persona.contactoPersona }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-2">
+        <div id="eclipse4">
+        </div>
+        <div id="eclipse5">
+        </div>
+        <div id="eclipse6">
+        </div>
+    </div>
   </div>
-  <div class="col-6">
-    <img src="{{ persona.perfilImgPersona }}" alt="" width="100" />
-    {{ persona.nombrePersona }} {{ persona.apellidoPersona }}
-    {{ persona.tituloPersona }}
-  </div>
-  <div class="col-9">
-    {{ persona.edadPersona }}{{ persona.dniPersona }}{{ persona.direccionPersona }}
-    {{ persona.ubicacionPersona }}{{ persona.contactoPersona }}{{ persona.emailPersona }}
-  </div>
-</div>
   <!-- Modal edit perfil -->
 
   <div
@@ -91,7 +138,7 @@
                   class="form-control"
                   id="edadPersona"
                   placeholder="Edad"
-                />                
+                />
                 <label for="dniPersona">DNI: </label>
                 <input
                   type="text"
