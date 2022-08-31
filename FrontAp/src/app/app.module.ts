@@ -17,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LoginapComponent } from './components/loginap/loginap.component';
 import { interceptorProvider } from './service/interceptor-service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { interceptorProvider } from './service/interceptor-service';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    NgCircleProgressModule.forRoot({}),
+    NgCircleProgressModule,
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
