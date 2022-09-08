@@ -3,6 +3,7 @@ export interface Educacion {
   nombreEdu: string;
   fechaEdu: number;
   direccionEdu: string;
+  ubicacionEdu: string;
   contactoEdu: number;
   descEdu: string;
   estadoEdu: string;
