@@ -1,230 +1,129 @@
 <div *ngIf="persona" id="main-container">
-  <div class="row align-items">
-    <div class="col text-center">
-      <div class="editBanner">
-        <button class="pencil" *ngIf="isLogged">
-          <a
-            (click)="onOpenModal('editPerfil', persona)"
-            data-placement="top"
-            data-toggle="tooltip"
-            data-original-title="Edit"
-            ><i class="fa-solid fa-pen-to-square"></i>
-          </a>
-        </button>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" id="perfil">
+        <img src="{{ persona.bannerImgPersona }}" alt="" id="banner" />
+        <img src="{{ persona.perfilImgPersona }}" class="perfil-img" />
+        <div class="editPerfil">
+          <button class="pencil" *ngIf="isLogged">
+            <a (click)="onOpenModal('editPerfil', persona)" data-placement="top" data-toggle="tooltip"
+              data-original-title="Edit"><i class="fa-solid fa-pen-to-square"></i>
+            </a>
+          </button>
+        </div>
+      </div>
+      <div class="row" id="info">
+        <div class="col-sm-12" id="perfil-info">
+          <div class="col-sm-6" id="card-perfil">
+            <div>
+              <h2 id="nombre">
+                {{ persona.nombrePersona }} {{ persona.apellidoPersona }}
+              </h2>
+              <p id="profesion">{{ persona.tituloPersona }}</p>
+            </div>
+            <div id="eclipses1">
+              <div id="eclipse1">
+              </div>
+              <div id="eclipse2">
+              </div>
+              <div id="eclipse3">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-5" id="card-info">
+            <ul>
+              <h2>Información:</h2>
+              <li>
+                {{ persona.edadPersona }}
+              </li>
+              <li>
+                {{ persona.direccionPersona }}
+              </li>
+              <li>
+                {{ persona.ubicacionPersona }}
+              </li>
+              <li>
+                {{ persona.dniPersona }}
+              </li>
+              <li>
+                {{ persona.emailPersona }}
+              </li>
+              <li>
+                {{persona.contactoPersona }}
+              </li>
+            </ul>
+          </div>
+          <div id="eclipses2">
+            <div id="eclipse4">
+            </div>
+            <div id="eclipse5">
+            </div>
+            <div id="eclipse6">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-12">
-        <div>
-          <img src="{{ persona.bannerImgPersona }}" alt="" id="banner" />
-        </div>
-        <div>
-          <img
-            src="{{ persona.perfilImgPersona }}"
-            class="img-fluid"
-            width="100"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-3" id="card-perfil">
-        <h2 class="nombre">
-          {{ persona.nombrePersona }} {{ persona.apellidoPersona }}
-        </h2>
-        <p class="profesion">{{ persona.tituloPersona }}</p>
-      </div>
-      <div class="col-2">
-        <div id="eclipse1">
-        </div>
-        <div id="eclipse2">
-        </div>
-        <div id="eclipse3">
-        </div>
-      </div>
-      <div class="col-5" id="card-info">
-        <ul>
-          <h2>Informacion:</h2>
-          <li>
-            {{ persona.edadPersona }}
-          </li>
-          <li>
-            {{ persona.direccionPersona }}
-          </li>
-          <li>
-            {{ persona.ubicacionPersona }}
-          </li>
-          <li>
-            {{ persona.dniPersona }}
-          </li>
-          <li>
-            {{ persona.emailPersona }}
-          </li>
-          <li>
-            {{persona.contactoPersona }}
-          </li>
-        </ul>
-      </div>
-      <div class="col-2">
-        <div id="eclipse4">
-        </div>
-        <div id="eclipse5">
-        </div>
-        <div id="eclipse6">
-        </div>
-    </div>
-  </div>
+
   <!-- Modal edit perfil -->
 
-  <div
-    class="modal fade"
-    id="editPerfilPersonaModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="editPerfilPersonaModalLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade" id="editPerfilPersonaModal" tabindex="-1" role="dialog"
+    aria-labelledby="editPerfilPersonaModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="editPerfilPersonaModalLabel">
             Edit Perfil
           </h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
           <div class="modal-body">
             <form #editForm="ngForm">
               <div class="form-group">
                 <label for="nombrePersona">Nombre: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.nombrePersona }}"
-                  name="nombrePersona"
-                  class="form-control"
-                  id="nombrePersona"
-                  placeholder="Nombre"
-                />
+                <input type="text" ngModel="{{ updatePersona?.nombrePersona }}" name="nombrePersona"
+                  class="form-control" id="nombrePersona" placeholder="Nombre" />
                 <label for="apellidoPersona">Apellido: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.apellidoPersona }}"
-                  name="apellidoPersona"
-                  class="form-control"
-                  id="apellidoPersona"
-                  placeholder="Apellido"
-                />
+                <input type="text" ngModel="{{ updatePersona?.apellidoPersona }}" name="apellidoPersona"
+                  class="form-control" id="apellidoPersona" placeholder="Apellido" />
                 <label for="tituloPersona">Titulo: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.tituloPersona }}"
-                  name="tituloPersona"
-                  class="form-control"
-                  id="tituloPersona"
-                  placeholder="Titulo"
-                />
+                <input type="text" ngModel="{{ updatePersona?.tituloPersona }}" name="tituloPersona"
+                  class="form-control" id="tituloPersona" placeholder="Titulo" />
                 <label for="edadPersona">Edad: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.edadPersona }}"
-                  name="edadPersona"
-                  class="form-control"
-                  id="edadPersona"
-                  placeholder="Edad"
-                />
+                <input type="text" ngModel="{{ updatePersona?.edadPersona }}" name="edadPersona" class="form-control"
+                  id="edadPersona" placeholder="Edad" />
                 <label for="dniPersona">DNI: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.dniPersona }}"
-                  name="dniPersona"
-                  class="form-control"
-                  id="dniPersona"
-                  placeholder="DNI"
-                />
+                <input type="text" ngModel="{{ updatePersona?.dniPersona }}" name="dniPersona" class="form-control"
+                  id="dniPersona" placeholder="DNI" />
                 <label for="direccionPersona">Dirección: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.direccionPersona }}"
-                  name="direccionPersona"
-                  class="form-control"
-                  id="direccionPersona"
-                  placeholder="Dirección"
-                />
+                <input type="text" ngModel="{{ updatePersona?.direccionPersona }}" name="direccionPersona"
+                  class="form-control" id="direccionPersona" placeholder="Dirección" />
                 <label for="ubicacionPersona">Ubicación: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.ubicacionPersona }}"
-                  name="ubicacionPersona"
-                  class="form-control"
-                  id="ubicacionPersona"
-                  placeholder="Ubicación"
-                />
+                <input type="text" ngModel="{{ updatePersona?.ubicacionPersona }}" name="ubicacionPersona"
+                  class="form-control" id="ubicacionPersona" placeholder="Ubicación" />
                 <label for="contactoPersona">Contacto: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.contactoPersona }}"
-                  name="contactoPersona"
-                  class="form-control"
-                  id="contactoPersona"
-                  placeholder="Contacto"
-                />
+                <input type="text" ngModel="{{ updatePersona?.contactoPersona }}" name="contactoPersona"
+                  class="form-control" id="contactoPersona" placeholder="Contacto" />
                 <label for="emailPersona">Email: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.emailPersona }}"
-                  name="emailPersona"
-                  class="form-control"
-                  id="emailPersona"
-                  placeholder="Email"
-                />
+                <input type="text" ngModel="{{ updatePersona?.emailPersona }}" name="emailPersona" class="form-control"
+                  id="emailPersona" placeholder="Email" />
                 <label for="perfilImgPersona">Imagen perfil: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.perfilImgPersona }}"
-                  name="perfilImgPersona"
-                  class="form-control"
-                  id="perfilImgPersona"
-                  placeholder="Imagen perfil"
-                />
+                <input type="text" ngModel="{{ updatePersona?.perfilImgPersona }}" name="perfilImgPersona"
+                  class="form-control" id="perfilImgPersona" placeholder="Imagen perfil" />
                 <label for="bannerImgPersona">Banner: </label>
-                <input
-                  type="text"
-                  ngModel="{{ updatePersona?.bannerImgPersona }}"
-                  name="bannerImgPersona"
-                  class="form-control"
-                  id="bannerImgPersona"
-                  placeholder="Banner"
-                />
-                <input
-                  type="hidden"
-                  ngModel="{{ updatePersona?.idPersona }}"
-                  name="idPersona"
-                  class="form-control"
-                  id="idPersona"
-                  placeholder=""
-                />
+                <input type="text" ngModel="{{ updatePersona?.bannerImgPersona }}" name="bannerImgPersona"
+                  class="form-control" id="bannerImgPersona" placeholder="Banner" />
+                <input type="hidden" ngModel="{{ updatePersona?.idPersona }}" name="idPersona" class="form-control"
+                  id="idPersona" placeholder="" />
               </div>
               <div class="modal-footer">
-                <button
-                  type="button"
-                  id=""
-                  class="btn btn-secondary"
-                  data-dismiss="modal"
-                >
+                <button type="button" id="" class="btn btn-secondary" data-dismiss="modal">
                   Close
                 </button>
-                <button
-                  (click)="onUpdatePersona(editForm.value)"
-                  data-dismiss="modal"
-                  class="btn btn-primary"
-                >
+                <button (click)="onUpdatePersona(editForm.value)" data-dismiss="modal" class="btn btn-primary">
                   Add changes
                 </button>
               </div>
