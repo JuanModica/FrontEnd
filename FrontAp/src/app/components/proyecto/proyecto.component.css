@@ -1,0 +1,135 @@
+#pro-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .pro-title {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    border: none;
+    color: #ffffff;
+  }
+
+  #main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  
+  #proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px; 
+  }
+  
+  #buttons {
+    display:flex;
+    justify-content: flex-end;
+  }
+  
+  .button {
+    margin: 5px;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    border: none;
+    color: #ffffff;
+  }
+  
+  #pro-card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+  }
+
+  #pro-card img {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 20px;
+  }
+  
+  ul {
+    margin: 10px;
+  }
+  
+  li {
+    list-style-type: none;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    mix-blend-mode: overlay;
+    margin: 5px;
+  }
+  
+  #eclipses {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  #eclipse1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      rgba(255, 166, 193, 0.5) 29.69%,
+      rgba(255, 50, 112, 0.5) 72.4%,
+      rgba(156, 0, 47, 0.71) 100%
+    );
+  }
+  
+  #eclipse2 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      rgba(182, 173, 209, 0.5) 32.29%,
+      rgba(88, 66, 151, 0.5) 73.96%,
+      #1e0072 100%
+    );
+  }
+  
+  #eclipse3 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      rgba(231, 163, 233, 0.5) 35.94%,
+      rgba(207, 70, 210, 0.5) 72.4%,
+      #bd00c1 100%
+    );
+  }
