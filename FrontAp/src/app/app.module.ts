@@ -38,7 +38,7 @@ import { interceptorProvider } from './service/interceptor-service';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    NgCircleProgressModule,
+    NgCircleProgressModule.forRoot({}),
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
