@@ -1,132 +1,129 @@
-#eduSec {
-    position: relative;
-    top: 320px;
-  }
-  .eduTitle {
-    position: relative;
-    font-family: "Roboto Mono", monospace;
-    font-weight: 400;
-    font-size: 30px;
-    color: #ffffff;
-  }
-  
-  .educacion {
-    display: flex;
-  }
+#edu-sec {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
 
-  .plus {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 1;
-    left: 430px;
-    bottom: 43px;
-    width: 35px;
-    height: 35px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
-    border: none;
-    color: #ffffff;
-  }
+.edu-title {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 0;
+  color: #ffffff;
+}
 
-  .boton {
-    position: relative;
-    margin: 4px;
-    z-index: 1;
-    left: 965px;
-    bottom: 45px;
-    width: 35px;
-    height: 35px;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
-    border-radius: 50px;
-    border: none;
-    color: #ffffff;
-  }
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  border: none;
+  color: #ffffff;
+}
 
-  #edu-Card {
-    box-sizing: border-box;
-    position: relative;
-    width: 1000px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    margin-bottom: 60px;
-  }
+#main-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
 
-  li {
-    list-style-type: none;
-    font-family: "Roboto Mono", monospace;
-    font-weight: 400;
-    font-size: 14px;
-    color: #ffffff;
-    mix-blend-mode: overlay;
-    margin: 5px;
-  }
-  
-  ul {
-    margin: 40px;
-  }
+#educaciones {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
-  #eclipses {
-    margin-left: 130px;
-    }
+#buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
 
-  #eclipse1 {
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    left: 30px;
-    top: 5px;
-  
-    background: linear-gradient(
-      135deg,
-      #ffffff 0%,
-      rgba(255, 166, 193, 0.5) 29.69%,
-      rgba(255, 50, 112, 0.5) 72.4%,
-      rgba(156, 0, 47, 0.71) 100%
-    );
-  }
-  
-  #eclipse2 {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    border-radius: 50px;
-    left: 90px;
-  
-    background: linear-gradient(
-      135deg,
-      #ffffff 0%,
-      rgba(231, 163, 233, 0.5) 35.94%,
-      rgba(207, 70, 210, 0.5) 72.4%,
-      #bd00c1 100%
-    );
-  }
-  
-  #eclipse3 {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    bottom: 20px;
-  
-    background: linear-gradient(
-      135deg,
-      #ffffff 0%,
-      rgba(182, 173, 209, 0.5) 32.29%,
-      rgba(88, 66, 151, 0.5) 73.96%,
-      #1e0072 100%
-    );
-  }
-  
+.button {
+  margin: 5px;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  border: none;
+  color: #ffffff;
+}
+
+#edu-card {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+ul {
+  margin: 10px;
+}
+
+li {
+  list-style-type: none;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  mix-blend-mode: overlay;
+  margin: 5px;
+}
+
+#eclipses {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+#eclipse1 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(255, 166, 193, 0.5) 29.69%,
+    rgba(255, 50, 112, 0.5) 72.4%,
+    rgba(156, 0, 47, 0.71) 100%
+  );
+}
+
+#eclipse2 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(182, 173, 209, 0.5) 32.29%,
+    rgba(88, 66, 151, 0.5) 73.96%,
+    #1e0072 100%
+  );
+}
+
+#eclipse3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    rgba(231, 163, 233, 0.5) 35.94%,
+    rgba(207, 70, 210, 0.5) 72.4%,
+    #bd00c1 100%
+  );
+}

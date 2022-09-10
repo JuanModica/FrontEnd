@@ -1,33 +1,30 @@
-<div class="row" id="eduSec">
-  <div class="col-12">
-    <div class="text-center">
-      <h2 class="eduTitle">Formación Académica:</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12" id="edu-sec">
+      <h2 class="edu-title">Formación Académica:</h2>
+      <button type="button" class="plus" (click)="onOpenModal('add')" *ngIf="isLogged">
+        <a>
+          <i class="fa fa-plus"></i> <span class="sr-only">(current)</span>
+        </a>
+      </button>
     </div>
-    <button type="button" class="plus" (click)="onOpenModal('add')" *ngIf="isLogged">
-      <a>
-        <i class="fa fa-plus"></i> <span class="sr-only">(current)</span>
-      </a>
-    </button>
   </div>
   <div id="main-container">
-    <div class="row align-items" *ngFor="let educacion of educaciones">
-      <div class="col">
-        <div>
-          <button *ngIf="isLogged" class="boton">
+    <div class="row" *ngFor="let educacion of educaciones">
+      <div class="col-sm-12" id="educaciones">
+        <div class="col-sm-12" id="buttons">
+          <button *ngIf="isLogged" class="button">
             <a (click)="onOpenModal('edit', educacion)" data-placement="top" data-toggle="tooltip"
               data-original-title="Edit"><i class="fa fa-pencil"></i>
             </a>
           </button>
-          <button *ngIf="isLogged" class="boton">
+          <button *ngIf="isLogged" class="button">
             <a (click)="onOpenModal('delete', educacion)" data-placement="top" data-toggle="tooltip"
               data-original-title="delete"><i class="fa fa-times"></i>
             </a>
           </button>
         </div>
-      </div>
-      <div class="educacion">
-        <div class="col-1"></div>
-        <div class="col-8" id="edu-Card">
+        <div class="col-sm-12" id="edu-card">
           <div>
             <ul>
               <li>
@@ -50,7 +47,7 @@
                 {{ educacion.direccionEdu }}
               </li>
               <li>
-                {{ educacion.contactoEdu }} 
+                {{ educacion.contactoEdu }}
               </li>
               <li>
                 {{ educacion.descEdu }}
@@ -58,7 +55,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-3" id="eclipses">
+        <div class="col-sm-12" id="eclipses">
           <div id="eclipse1">
           </div>
           <div id="eclipse2">
