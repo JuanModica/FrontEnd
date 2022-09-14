@@ -16,7 +16,7 @@
 }
 
 #logoAP {
-  width: 200px;
+  width: 30vw;
 }
 
 #linkedin,
@@ -24,17 +24,17 @@
 #twitter,
 #facebook,
 #instagram {
-  width: 50px;
-  height: 50px;
+  width: 10vw;
   padding: 5px;
-  margin-bottom: 10px;
+  margin-left: 2vw;
+  margin-bottom: 1rem;
   justify-content: center;
 }
 
 button {
   box-sizing: border-box;
-  height: 50px;
-  width: 100px;
+  height: 8vh;
+  width: 15vw;
   background: linear-gradient(
     104.64deg,
     rgba(255, 255, 255, 0.4) 21.4%,
@@ -45,6 +45,59 @@ button {
   border: none;
   color: #f5f5f5;
   font-family: "Roboto", sans-serif;
-  font-size: 20px;
+  font-size: 3vw;
   font-weight: 400;
+}
+
+@media (min-width: 768px) {
+
+  #logoAP {
+    width: 20vw;
+  }
+
+  #linkedin,
+  #git,
+  #twitter,
+  #facebook,
+  #instagram {
+    width: 8vw;
+  }
+  
+  button {
+    height: 10vh;
+    width: 15vw;
+    font-size: 3.5vw;
+  }
+}
+
+@media (min-width: 768px) {
+
+  #logoAP {
+    width: 20vw;
+  }
+
+  #linkedin,
+  #git,
+  #twitter,
+  #facebook,
+  #instagram {
+    width: 8vw;
+  }
+  
+  button {
+    height: 10vh;
+    width: 15vw;
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 992px) {
+
+  #linkedin,
+  #git,
+  #twitter,
+  #facebook,
+  #instagram {
+    width: 6vw;
+  }
 }
