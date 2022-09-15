@@ -1,26 +1,26 @@
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" id="inicio">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="inicio">
             <img src="../../../assets/APLogo.png" id="logoAP">
+            <div id="redes">
+                <a href="https://www.linkedin.com/in/juan-cruz-modica-063733189/" target="_blank">
+                    <img src="../../../assets/linkedin.png" id="linkedin">
+                </a>
+                <a href="https://github.com/JuanModica" target="_blank">
+                    <img src="../../../assets/github.png" id="git">
+                </a>
+                <a href="https://twitter.com/juuuancruzm" target="_blank">
+                    <img src="../../../assets/twitter.png" id="twitter">
+                </a>
+                <a href="https://es-la.facebook.com/juan.modica" target="_blank">
+                    <img src="../../../assets/facebook.png" id="facebook">
+                </a>
+                <a href="https://www.instagram.com/juanncruzm/" target="_blank">
+                    <img src="../../../assets/instagram.png" id="instagram">
+                </a>
+            </div>
             <button type="button" (click)="login()" *ngIf="!isLogged">Login</button>
             <button type="button" (click)="onLogOut()" *ngIf="isLogged">Logout</button>
-        </div>
-       <div class="col-xs-12 col-sm-12" id="redes">
-            <a href="https://www.linkedin.com/in/juan-cruz-modica-063733189/" target="_blank">
-                <img src="../../../assets/linkedin.png" id="linkedin">
-            </a>
-            <a href="https://github.com/JuanModica" target="_blank">
-                <img src="../../../assets/github.png" id="git">
-            </a>
-            <a href="https://twitter.com/juuuancruzm" target="_blank">
-                <img src="../../../assets/twitter.png" id="twitter">
-            </a>
-            <a href="https://es-la.facebook.com/juan.modica" target="_blank">
-                <img src="../../../assets/facebook.png" id="facebook">
-            </a>
-            <a href="https://www.instagram.com/juanncruzm/" target="_blank">
-                <img src="../../../assets/instagram.png" id="instagram">
-            </a>
         </div>
     </div>
 </div>

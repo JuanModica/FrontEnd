@@ -1,4 +1,4 @@
-.container {
+.container-fluid {
   background: rgba(99, 99, 99, 0.28);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -16,7 +16,8 @@
 }
 
 #logoAP {
-  width: 30vw;
+  width: 100px;
+  height: 80px;
 }
 
 #linkedin,
@@ -24,17 +25,16 @@
 #twitter,
 #facebook,
 #instagram {
-  width: 10vw;
+  width: 35px;
+  height: 35px;
   padding: 5px;
-  margin-left: 2vw;
-  margin-bottom: 1rem;
   justify-content: center;
 }
 
 button {
   box-sizing: border-box;
-  height: 8vh;
-  width: 15vw;
+  width: 60px;
+  height: 30px;
   background: linear-gradient(
     104.64deg,
     rgba(255, 255, 255, 0.4) 21.4%,
@@ -45,14 +45,14 @@ button {
   border: none;
   color: #f5f5f5;
   font-family: "Roboto", sans-serif;
-  font-size: 3vw;
+  font-size: 12px;
   font-weight: 400;
 }
 
 @media (min-width: 768px) {
-
   #logoAP {
-    width: 20vw;
+    width: 160px;
+    height: 120px;
   }
 
   #linkedin,
@@ -60,44 +60,59 @@ button {
   #twitter,
   #facebook,
   #instagram {
-    width: 8vw;
+    width: 55px;
+    height: 55px;
   }
-  
+
   button {
-    height: 10vh;
-    width: 15vw;
-    font-size: 3.5vw;
-  }
-}
-
-@media (min-width: 768px) {
-
-  #logoAP {
-    width: 20vw;
-  }
-
-  #linkedin,
-  #git,
-  #twitter,
-  #facebook,
-  #instagram {
-    width: 8vw;
-  }
-  
-  button {
-    height: 10vh;
-    width: 15vw;
-    font-size: 3vw;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 30px;
   }
 }
 
 @media (min-width: 992px) {
+  #logoAP {
+    width: 200px;
+    height: 140px;
+  }
 
   #linkedin,
   #git,
   #twitter,
   #facebook,
   #instagram {
-    width: 6vw;
+    width: 70px;
+    height: 70px;
+  }
+
+  button {
+    width: 120px;
+    height: 50px;
+    font-size: 26px;
+    border-radius: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  #logoAP {
+    width: 250px;
+    height: 180px;
+  }
+
+  #linkedin,
+  #git,
+  #twitter,
+  #facebook,
+  #instagram {
+    width: 80px;
+    height: 80px;
+  }
+
+  button {
+    width: 180px;
+    height: 80px;
+    font-size: 38px;
   }
 }
