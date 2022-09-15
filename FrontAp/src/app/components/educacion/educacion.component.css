@@ -3,12 +3,12 @@
   align-items: center;
   justify-content: space-evenly;
   margin-top: 50px;
-} 
+}
 
 .edu-title {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 28px;
   margin: 0;
   color: #ffffff;
 }
@@ -21,7 +21,6 @@
   width: 35px;
   height: 35px;
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
   box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   border: none;
@@ -51,7 +50,6 @@
   width: 35px;
   height: 35px;
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
   box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   border: none;
@@ -62,7 +60,6 @@
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
   box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
@@ -75,7 +72,7 @@ li {
   list-style-type: none;
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   color: #ffffff;
   mix-blend-mode: overlay;
   margin: 5px;
@@ -126,4 +123,22 @@ li {
     rgba(207, 70, 210, 0.5) 72.4%,
     #bd00c1 100%
   );
+}
+
+@media (min-width: 992px) {
+  #edu-sec {
+    justify-content: center;
+  }
+
+  #educaciones {
+    justify-content: flex-end;
+  }
+
+  h5 {
+    font-size: 26px;
+  }
+
+  li {
+    font-size: 18px;
+  }
 }
