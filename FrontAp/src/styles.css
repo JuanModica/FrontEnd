@@ -2,14 +2,13 @@ html {
 margin: 0;
 padding: 0;
 }
+
 body {
   background: linear-gradient(
-    112.66deg,
-    #84697f 2.27%,
-    rgba(102, 63, 96, 0.73) 26.01%,
-    #efd7eb 51.73%,
-    rgba(112, 35, 99, 0.8) 71.14%,
-    rgba(77, 0, 64, 0.85) 100%
+    135deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(25, 75, 97, 1) 50%,
+    rgb(7, 175, 209) 100%
   );
   background-repeat: no-repeat;
   background-attachment: fixed;

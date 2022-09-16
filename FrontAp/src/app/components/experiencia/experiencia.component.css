@@ -80,7 +80,7 @@ li {
 #eclipses {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-end;
   margin-top: 20px;
 }
 
@@ -90,10 +90,9 @@ li {
   border-radius: 50px;
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    rgba(255, 166, 193, 0.5) 29.69%,
-    rgba(255, 50, 112, 0.5) 72.4%,
-    rgba(156, 0, 47, 0.71) 100%
+    rgba(2, 0, 36, 1) 0%,
+    rgba(114, 22, 57, 1) 50%,
+    rgba(230, 45, 78, 1) 100%
   );
 }
 
@@ -103,10 +102,9 @@ li {
   border-radius: 50px;
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    rgba(182, 173, 209, 0.5) 32.29%,
-    rgba(88, 66, 151, 0.5) 73.96%,
-    #1e0072 100%
+    rgba(2, 0, 36, 1) 0%,
+    rgba(107, 23, 133, 1) 50%,
+    rgba(212, 45, 230, 1) 100%
   );
 }
 
@@ -116,10 +114,9 @@ li {
   border-radius: 50px;
   background: linear-gradient(
     135deg,
-    #ffffff 0%,
-    rgba(231, 163, 233, 0.5) 35.94%,
-    rgba(207, 70, 210, 0.5) 72.4%,
-    #bd00c1 100%
+    rgba(2, 0, 36, 1) 0%,
+    rgba(39, 23, 135, 1) 50%,
+    rgba(75, 45, 230, 1) 100%
   );
 }
 
