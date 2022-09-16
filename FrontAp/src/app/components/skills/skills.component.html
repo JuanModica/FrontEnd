@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12" id="skills-sec">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="skills-sec">
       <h2 class="skills-title">Hard & Soft Skills:</h2>
       <button type="button" class="plus" (click)="onOpenModal('add')" *ngIf="isLogged">
         <a>
@@ -11,7 +11,7 @@
   </div>
   <div id="main-container">
     <div class="row" *ngFor="let skills of skilles">
-      <div class="col-sm-12" id="skills">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="skills">
         <div id="buttons">
           <button *ngIf="isLogged" class="button">
             <a (click)="onOpenModal('edit', skills)" data-placement="top" data-toggle="tooltip"
@@ -32,7 +32,7 @@
           [innerStrokeWidth]="7" 
           [outerStrokeGradient]="true"
           [outerStrokeColor]="'#000000'"
-          [outerStrokeGradientStopColor]="'#d502f5'" 
+          [outerStrokeGradientStopColor]="'#4b2de6'" 
           [innerStrokeColor]="'#e7e8ea'" 
           [animation]="true"
           [animationDuration]="400" 

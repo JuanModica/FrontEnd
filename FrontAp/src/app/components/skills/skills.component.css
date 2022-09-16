@@ -1,14 +1,14 @@
 #skills-sec {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 50px;
 }
 
 .skills-title {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 28px;
   margin: 0;
   color: #ffffff;
 }
@@ -55,9 +55,27 @@
 
 #circle-skills{
   height: 150px;
+  margin: 0px 20px 20px 20px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   box-shadow: 4px 4px 24px -1px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
 
+@media (min-width: 992px) {
+
+  #main-container {
+    justify-content: space-evenly;
+  }
+
+  #circle-skills {
+    height: 170px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #circle-skills {
+    width: 200px;
+    height: 200px;
+  }
+}

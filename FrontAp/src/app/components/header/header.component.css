@@ -79,7 +79,6 @@
   font-size: 15px;
   line-height: 20px;
   color: #ffffff;
-  mix-blend-mode: overlay;
 }
 
 #profesion {
@@ -88,7 +87,6 @@
   font-size: 12px;
   line-height: 18px;
   color: #ffffff;
-  mix-blend-mode: overlay;
 }
 
 #card-info h2 {
@@ -96,7 +94,6 @@
   font-weight: 400;
   font-size: 22px;
   color: #ffffff;
-  mix-blend-mode: overlay;
 }
 
 ul {
@@ -110,7 +107,6 @@ li {
   font-weight: 400;
   font-size: 14px;
   color: #ffffff;
-  mix-blend-mode: overlay;
 }
 
 #eclipses1 {

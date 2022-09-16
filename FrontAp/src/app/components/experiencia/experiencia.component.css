@@ -1,7 +1,7 @@
 #exp-sec {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 50px;
 }
 
@@ -73,7 +73,6 @@ li {
   font-weight: 400;
   font-size: 12px;
   color: #ffffff;
-  mix-blend-mode: overlay;
   margin: 5px;
 }
 
@@ -120,11 +119,9 @@ li {
   );
 }
 
-@media (min-width: 992px) {
 
-  #exp-sec {
-    justify-content: center;
-  }
+
+@media (min-width: 992px) {
 
   #experiencias {
     justify-content: flex-end;

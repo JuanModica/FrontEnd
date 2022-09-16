@@ -11,8 +11,8 @@
   </div>
   <div id="main-container">
     <div class="row" *ngFor="let experiencia of experiencias">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-10 col-xxl-10" id="experiencias">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-10 col-xxl-10" id="buttons">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="experiencias">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="buttons">
           <button *ngIf="isLogged" class="button">
             <a (click)="onOpenModal('edit', experiencia)" data-placement="top" data-toggle="tooltip"
               data-original-title="Edit"><i class="fa fa-pencil"></i>
@@ -24,7 +24,7 @@
             </a>
           </button>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-10 col-xxl-10" id="exp-card">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="exp-card">
           <div>
             <ul>
               <li>
@@ -50,12 +50,12 @@
                 {{ experiencia.contactoExp }}
               </li>
               <li>
-                {{ experiencia.descExp }}
+                <p>{{ experiencia.descExp }}</p>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-10 col-xxl-10" id="eclipses">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="eclipses">
           <div id="eclipse1">
           </div>
           <div id="eclipse2">

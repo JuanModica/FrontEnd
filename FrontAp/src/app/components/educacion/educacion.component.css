@@ -1,7 +1,7 @@
 #edu-sec {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 50px;
 }
 
@@ -74,7 +74,6 @@ li {
   font-weight: 400;
   font-size: 12px;
   color: #ffffff;
-  mix-blend-mode: overlay;
   margin: 5px;
 }
 
@@ -123,9 +122,6 @@ li {
 }
 
 @media (min-width: 992px) {
-  #edu-sec {
-    justify-content: center;
-  }
 
   #educaciones {
     justify-content: flex-end;
