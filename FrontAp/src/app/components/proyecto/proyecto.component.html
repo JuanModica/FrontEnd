@@ -28,20 +28,22 @@
           <div>
             <ul>
               <li>
-                <h3>
+                <h5>
                   {{ proyecto.nombrePro }}
-                </h3>
+                </h5>
               </li>
               <li>
                 {{ proyecto.linkPro }}
               </li>
               <li>
-                {{ proyecto.descPro }}
+                <p>{{ proyecto.descPro }}</p>
               </li>
             </ul>
           </div>
           <div>
-            <img src= "{{ proyecto.imgPro }}" >
+            <a target="_blank" href="{{ proyecto.imgPro }}">
+              <img src= "{{ proyecto.imgPro }}" >
+            </a>
           </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="eclipses">
