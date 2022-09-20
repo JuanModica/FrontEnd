@@ -1,7 +1,7 @@
 .container-fluid {
   background: rgba(99, 99, 99, 0.28);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  border-radius: 0 0 20px 20px;
 }
 #inicio {
   display: flex;
@@ -16,8 +16,7 @@
 }
 
 #logoAP {
-  width: 100px;
-  height: 80px;
+  width: 24vw;
 }
 
 #linkedin,
@@ -25,16 +24,14 @@
 #twitter,
 #facebook,
 #instagram {
-  width: 35px;
-  height: 35px;
+  width: 7vw;
   padding: 5px;
   justify-content: center;
 }
 
 button {
   box-sizing: border-box;
-  width: 60px;
-  height: 30px;
+  width: 14.5vw;
   background: linear-gradient(
     104.64deg,
     rgba(255, 255, 255, 0.4) 21.4%,
@@ -45,14 +42,13 @@ button {
   border: none;
   color: #f5f5f5;
   font-family: "Roboto", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
 }
 
 @media (min-width: 768px) {
   #logoAP {
-    width: 160px;
-    height: 120px;
+    width: 21vw;
   }
 
   #linkedin,
@@ -60,59 +56,35 @@ button {
   #twitter,
   #facebook,
   #instagram {
-    width: 55px;
-    height: 55px;
+    width: 5vw;
   }
 
   button {
-    width: 100px;
-    height: 40px;
-    font-size: 20px;
+    width: 13vw;
+    font-size: 1.25rem;
     border-radius: 30px;
   }
 }
 
 @media (min-width: 992px) {
   #logoAP {
-    width: 200px;
-    height: 140px;
-  }
-
-  #linkedin,
-  #git,
-  #twitter,
-  #facebook,
-  #instagram {
-    width: 70px;
-    height: 70px;
+    width: 20vw;
   }
 
   button {
-    width: 120px;
-    height: 50px;
-    font-size: 26px;
+    width: 12vw;
+    font-size: 1.625rem;
     border-radius: 40px;
   }
 }
 
 @media (min-width: 1400px) {
   #logoAP {
-    width: 250px;
-    height: 180px;
-  }
-
-  #linkedin,
-  #git,
-  #twitter,
-  #facebook,
-  #instagram {
-    width: 80px;
-    height: 80px;
+    width: 18vw;
   }
 
   button {
-    width: 180px;
-    height: 80px;
-    font-size: 38px;
+    width: 13vw;
+    font-size: 2.375rem;
   }
 }
