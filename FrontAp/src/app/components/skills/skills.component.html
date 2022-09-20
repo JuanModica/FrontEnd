@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="skills-sec">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="skills-sec">
       <h2 class="skills-title">Hard & Soft Skills:</h2>
       <button type="button" class="plus" (click)="onOpenModal('add')" *ngIf="isLogged">
         <a>
@@ -11,7 +11,7 @@
   </div>
   <div id="main-container">
     <div class="row" *ngFor="let skills of skilles">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="skills">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="skills">
         <div id="buttons">
           <button *ngIf="isLogged" class="button">
             <a (click)="onOpenModal('edit', skills)" data-placement="top" data-toggle="tooltip"
@@ -25,23 +25,11 @@
           </button>
         </div>
         <div id="circle-skills">
-          <circle-progress 
-          [percent]="skills.percentSkills" 
-          [radius]="100" 
-          [outerStrokeWidth]="14"
-          [innerStrokeWidth]="7" 
-          [outerStrokeGradient]="true"
-          [outerStrokeColor]="'#000000'"
-          [outerStrokeGradientStopColor]="'#4b2de6'" 
-          [innerStrokeColor]="'#e7e8ea'" 
-          [animation]="true"
-          [animationDuration]="400" 
-          [showImage]="true"
-          [imageSrc]="skills.imgSkills"
-          [imageWidth]="80"
-          [imageHeight]="80"
-          [responsive]="true"
-          ></circle-progress>
+          <circle-progress [percent]="skills.percentSkills" [radius]="100" [outerStrokeWidth]="14"
+            [innerStrokeWidth]="7" [outerStrokeGradient]="true" [outerStrokeColor]="'#000000'"
+            [outerStrokeGradientStopColor]="'#4b2de6'" [innerStrokeColor]="'#e7e8ea'" [animation]="true"
+            [animationDuration]="400" [showImage]="true" [imageSrc]="skills.imgSkills" [imageWidth]="80"
+            [imageHeight]="80" [responsive]="true"></circle-progress>
         </div>
       </div>
     </div>
@@ -63,18 +51,17 @@
         <form #addForm="ngForm" (ngSubmit)="onAddSkills(addForm)">
           <div class="form-group">
             <label for="nombreSkills">Skills: </label>
-            <input type="text" ngModel name="nombreSkills" class="form-control" id="nombreSkills" placeholder="Skills"
-              required />
+            <input type="text" ngModel name="nombreSkills" class="form-control" id="nombreSkills"
+              placeholder="Skills" />
           </div>
           <div class="form-group">
             <label for="percentSkills">Porcentaje: </label>
             <input type="text" ngModel name="percentSkills" class="form-control" id="percentSkills"
-              placeholder="Porcentaje" required />
+              placeholder="Porcentaje" />
           </div>
           <div class="form-group">
             <label for="imgSkills">Imagen: </label>
-            <input type="text" ngModel name="imgSkills" class="form-control" id="imgSkills" placeholder="Imagen"
-              required />
+            <input type="text" ngModel name="imgSkills" class="form-control" id="imgSkills" placeholder="Imagen" />
           </div>
           <div class="modal-footer">
             <button type="button" id="add-skills-form" class="btn btn-secondary" data-dismiss="modal">

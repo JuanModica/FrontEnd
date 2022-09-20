@@ -11,8 +11,8 @@
   </div>
   <div id="main-container">
     <div class="row" *ngFor="let experiencia of experiencias">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="experiencias">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="buttons">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="experiencias">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="buttons">
           <button *ngIf="isLogged" class="button">
             <a (click)="onOpenModal('edit', experiencia)" data-placement="top" data-toggle="tooltip"
               data-original-title="Edit"><i class="fa fa-pencil"></i>
@@ -24,7 +24,7 @@
             </a>
           </button>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="exp-card">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="exp-card">
           <div>
             <ul>
               <li>
@@ -55,7 +55,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="eclipses">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="eclipses">
           <div id="eclipse1">
           </div>
           <div id="eclipse2">
@@ -84,38 +84,34 @@
         <form #addForm="ngForm" (ngSubmit)="onAddExperiencia(addForm)">
           <div class="form-group">
             <label for="nombreExp">Titulo: </label>
-            <input type="text" ngModel name="nombreExp" class="form-control" id="nombreExp" placeholder="Titulo"
-              required />
+            <input type="text" ngModel name="nombreExp" class="form-control" id="nombreExp" placeholder="Titulo" />
           </div>
           <div class="form-group">
             <label for="fechaExp">Fecha: </label>
-            <input type="text" ngModel name="fechaExp" class="form-control" id="fechaExp" placeholder="Fecha"
-              required />
+            <input type="text" ngModel name="fechaExp" class="form-control" id="fechaExp" placeholder="Fecha" />
           </div>
           <div class="form-group">
             <label for="puestoExp">Puesto: </label>
-            <input type="text" ngModel name="puestoExp" class="form-control" id="puestoExp" placeholder="Puesto"
-              required />
+            <input type="text" ngModel name="puestoExp" class="form-control" id="puestoExp" placeholder="Puesto" />
           </div>
           <div class="form-group">
             <label for="ubicacionExp">Ubicación: </label>
             <input type="text" ngModel name="ubicacionExp" class="form-control" id="ubicacionExp"
-              placeholder="Ubicación" required />
+              placeholder="Ubicación" />
           </div>
           <div class="form-group">
             <label for="direccionExp">Dirección: </label>
             <input type="text" ngModel name="direccionExp" class="form-control" id="direccionExp"
-              placeholder="Dirección" required />
+              placeholder="Dirección" />
           </div>
           <div class="form-group">
             <label for="contactoExp">Contacto: </label>
-            <input type="text" ngModel name="contactoExp" class="form-control" id="contactoExp" placeholder="Contacto"
-              required />
+            <input type="text" ngModel name="contactoExp" class="form-control" id="contactoExp"
+              placeholder="Contacto" />
           </div>
           <div class="form-group">
             <label for="descExp">Descripción: </label>
-            <input type="text" ngModel name="descExp" class="form-control" id="descExp" placeholder="Descripción"
-              required />
+            <input type="text" ngModel name="descExp" class="form-control" id="descExp" placeholder="Descripción" />
           </div>
           <div class="modal-footer">
             <button type="button" id="add-experiencia-form" class="btn btn-secondary" data-dismiss="modal">

@@ -11,16 +11,16 @@
   </div>
   <div id="main-container">
     <div class="row" *ngFor="let proyecto of proyectos">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="proyectos">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"  id="buttons">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="proyectos">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="buttons">
           <button *ngIf="isLogged" class="button">
-            <a (click)="onOpenModal('edit', proyecto)" data-placement="top"
-              data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-pencil"></i>
+            <a (click)="onOpenModal('edit', proyecto)" data-placement="top" data-toggle="tooltip"
+              data-original-title="Edit"><i class="fa fa-pencil"></i>
             </a>
           </button>
           <button *ngIf="isLogged" class="button">
-            <a (click)="onOpenModal('delete', proyecto)" data-placement="top"
-              data-toggle="tooltip" data-original-title="delete"><i class="fa fa-times"></i>
+            <a (click)="onOpenModal('delete', proyecto)" data-placement="top" data-toggle="tooltip"
+              data-original-title="delete"><i class="fa fa-times"></i>
             </a>
           </button>
         </div>
@@ -42,7 +42,7 @@
           </div>
           <div>
             <a target="_blank" href="{{ proyecto.imgPro }}">
-              <img src= "{{ proyecto.imgPro }}" >
+              <img src="{{ proyecto.imgPro }}">
             </a>
           </div>
         </div>
@@ -73,23 +73,19 @@
         <form #addForm="ngForm" (ngSubmit)="onAddProyecto(addForm)">
           <div class="form-group">
             <label for="nombrePro">Titulo: </label>
-            <input type="text" ngModel name="nombrePro" class="form-control" id="nombrePro" placeholder="Titulo"
-              required />
+            <input type="text" ngModel name="nombrePro" class="form-control" id="nombrePro" placeholder="Titulo" />
           </div>
           <div class="form-group">
             <label for="linkPro">Link: </label>
-            <input type="text" ngModel name="linkPro" class="form-control" id="linkPro" placeholder="Link proyecto"
-              required />
+            <input type="text" ngModel name="linkPro" class="form-control" id="linkPro" placeholder="Link proyecto" />
           </div>
           <div class="form-group">
             <label for="descPro">Descripción: </label>
-            <input type="text" ngModel name="descPro" class="form-control" id="descPro" placeholder="Descripcion"
-              required />
+            <input type="text" ngModel name="descPro" class="form-control" id="descPro" placeholder="Descripcion" />
           </div>
           <div class="form-group">
             <label for="imgPro">Imágen: </label>
-            <input type="text" ngModel name="imgPro" class="form-control" id="imgPro" placeholder="Imágen proyecto"
-              required />
+            <input type="text" ngModel name="imgPro" class="form-control" id="imgPro" placeholder="Imágen proyecto" />
           </div>
           <div class="modal-footer">
             <button type="button" id="add-proyecto-form" class="btn btn-secondary" data-dismiss="modal">
