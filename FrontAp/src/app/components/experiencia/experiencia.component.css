@@ -135,3 +135,9 @@ h5 {
     font-size: 1.125rem;
   }
 }
+
+@media (min-width: 1400px) {
+  .exp-title {
+    font-size: 3rem;
+  }
+}

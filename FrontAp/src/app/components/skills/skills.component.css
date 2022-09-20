@@ -79,3 +79,9 @@
     height: 200px;
   }
 }
+
+@media (min-width: 1400px) {
+  .skills-title {
+    font-size: 3rem;
+  }
+}

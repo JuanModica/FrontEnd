@@ -8,7 +8,7 @@
 .pro-title {
   font-family: "Roboto Mono", monospace;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.75rem;
   margin: 0;
   color: #ffffff;
 }
@@ -65,8 +65,7 @@
 }
 
 #pro-card img {
-  width: 100px;
-  height: 100px;
+  width: 32vw;
   margin: 20px;
   border-radius: 20px;
 }
@@ -131,24 +130,21 @@ li {
   #pro-card {
     justify-content: space-between;
   }
-
-  #pro-card img {
-    width: 200px;
-    height: 150px;
-  }
 }
 
 @media (min-width: 992px) {
 
-  #pro-card img {
-    width: 400px;
-  }
-
 h5 {
-  font-size: 26px;
+  font-size: 1.625rem;
 }
 
   li {
-    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .pro-title {
+    font-size: 3rem;
   }
 }
