@@ -76,6 +76,10 @@ li {
   margin: 5px;
 }
 
+.card-desc ul{
+  width: 80%;
+}
+
 #eclipses {
   display: flex;
   align-items: center;
