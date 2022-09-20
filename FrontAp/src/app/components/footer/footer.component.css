@@ -43,6 +43,12 @@ footer {
   }
 }
 
+@media (min-width: 1366px) {
+  .footer-info p  {
+    font-size: 1.75rem;
+  }
+}
+
 @media (min-width: 1400px) {
   .footer-info p {
     font-size: 2rem;

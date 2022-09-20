@@ -329,6 +329,12 @@ li {
   }
 }
 
+@media (min-width: 1366px) {
+  .pencil {
+    margin-left: 200px;
+  }
+}
+
 @media (min-width: 1400px) {
   #perfil {
     justify-content: flex-start;

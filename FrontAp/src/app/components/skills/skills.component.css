@@ -80,6 +80,12 @@
   }
 }
 
+@media (min-width: 1366px) {
+  .skills-title {
+    font-size: 2.5rem;
+  }
+}
+
 @media (min-width: 1400px) {
   .skills-title {
     font-size: 3rem;
