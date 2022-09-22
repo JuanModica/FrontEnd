@@ -7,23 +7,23 @@ import { Educacion } from '../models/educacion';
   providedIn: 'root',
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion/';
+  URL = 'https://backendjcm.herokuapp.com/educacion';
 
   constructor(private http: HttpClient) {}
 
   public getEducacion():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(this.URL + 'all');
+    return this.http.get<Educacion[]>(this.URL + '/all');
   }
 
   public addEducacion(educacion: Educacion):Observable<Educacion>{
-    return this.http.post<Educacion>(this.URL + 'add', educacion);
+    return this.http.post<Educacion>(this.URL + '/add', educacion);
   }
 
   public updateEducacion(educacion: Educacion):Observable<Educacion>{
-    return this.http.put<Educacion>(this.URL + 'update', educacion);
+    return this.http.put<Educacion>(this.URL + '/update', educacion);
   }
 
   public deleteEducacion(idEdu: number):Observable<void>{
-    return this.http.delete<void>(this.URL + `delete/${idEdu}`);
+    return this.http.delete<void>(this.URL + `/delete/${idEdu}`);
   }
 }

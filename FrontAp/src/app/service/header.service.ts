@@ -7,7 +7,7 @@ import { Persona } from '../models/persona';
   providedIn: 'root'
 })
 export class HeaderService {
-  URL = 'http://localhost:8080/persona';
+  URL = 'https://backendjcm.herokuapp.com/persona';
 
   constructor(private http: HttpClient) { }
 
